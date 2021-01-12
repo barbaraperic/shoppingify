@@ -36,6 +36,13 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: ${theme.black}
   }
 `
 

@@ -51,8 +51,8 @@ const Header = () => {
             <a>Shoppingify</a>
           </Link>
         </Logo>
-      </div>
       <Nav />
+      </div>
       <div className="sub-bar">
         <p>Search</p>
       </div>
