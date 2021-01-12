@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Meta from './Meta'
-import styled, { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 
 const theme = {
   blue: '#C7EAE4',
@@ -25,9 +25,24 @@ const Inner = styled.div`
   background-color: red;
 `
 
+const GlobalStyle = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  }
+`
+
 const Page = ({children}) => {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <StyledPage>
         <Meta />
         <Header />
